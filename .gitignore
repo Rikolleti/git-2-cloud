@@ -1,0 +1,4 @@
+homework_1/.terraform
+homework_1/terraform.tfstate
+homework_1/terraform.tfstate.backup
+homework_1/terraform.tfvars
