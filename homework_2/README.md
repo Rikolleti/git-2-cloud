@@ -37,39 +37,14 @@
 - [Network Load Balancer](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/lb_network_load_balancer).
 - [Группа ВМ с сетевым балансировщиком](https://cloud.yandex.ru/docs/compute/operations/instance-groups/create-with-balancer).
 
----
-## Задание 2*. AWS (задание со звёздочкой)
+Ответ:
+<img width="1203" height="318" alt="1" src="https://github.com/user-attachments/assets/ec149b2a-2bcf-4fd5-86be-9346e0d5f731" />
 
-Это необязательное задание. Его выполнение не влияет на получение зачёта по домашней работе.
+<img width="1396" height="339" alt="2" src="https://github.com/user-attachments/assets/98925826-29a6-47d0-a933-13d3333d5b33" />
 
-**Что нужно сделать**
+<img width="817" height="797" alt="3" src="https://github.com/user-attachments/assets/527a14db-cc06-4830-9511-ff28345f6b84" />
 
-Используя конфигурации, выполненные в домашнем задании из предыдущего занятия, добавить к Production like сети Autoscaling group из трёх EC2-инстансов с  автоматической установкой веб-сервера в private домен.
 
-1. Создать бакет S3 и разместить в нём файл с картинкой:
-
- - Создать бакет в S3 с произвольным именем (например, _имя_студента_дата_).
- - Положить в бакет файл с картинкой.
- - Сделать доступным из интернета.
-2. Сделать Launch configurations с использованием bootstrap-скрипта с созданием веб-страницы, на которой будет ссылка на картинку в S3. 
-3. Загрузить три ЕС2-инстанса и настроить LB с помощью Autoscaling Group.
-
-Resource Terraform:
-
-- [S3 bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)
-- [Launch Template](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/launch_template).
-- [Autoscaling group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/autoscaling_group).
-- [Launch configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/launch_configuration).
-
-Пример bootstrap-скрипта:
-
-```
-#!/bin/bash
-yum install httpd -y
-service httpd start
-chkconfig httpd on
-cd /var/www/html
-echo "<html><h1>My cool web-server</h1></html>" > index.html
 ```
 ### Правила приёма работы
 
