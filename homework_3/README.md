@@ -21,12 +21,9 @@
 - [Object Storage bucket](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/storage_bucket).
 - [KMS key](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/kms_symmetric_key).
 
-## Ответ:
+### Ответ:
 
 <img width="693" height="122" alt="1" src="https://github.com/user-attachments/assets/2406a431-6295-4aa3-8710-3395627085b6" />
-
-
-```
 
 ### Правила приёма работы
 
