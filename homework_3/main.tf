@@ -15,6 +15,7 @@ resource "yandex_kms_symmetric_key" "key-a" {
 resource "yandex_storage_bucket" "test" {
   bucket    = var.bucket_name
   folder_id = var.folder_id
+  force_destroy = true
 
   anonymous_access_flags {
     read        = true
@@ -22,20 +23,27 @@ resource "yandex_storage_bucket" "test" {
     config_read = true
   }
 
-  server_side_encryption_configuration {
-    rule {
-      apply_server_side_encryption_by_default {
-        kms_master_key_id = yandex_kms_symmetric_key.key-a.id
-        sse_algorithm     = "aws:kms"
-      }
-    }
-  }
+#  server_side_encryption_configuration {
+#    rule {
+#      apply_server_side_encryption_by_default {
+#        kms_master_key_id = yandex_kms_symmetric_key.key-a.id
+#        sse_algorithm     = "aws:kms"
+#      }
+#    }
+#  }
 }
 
 resource "yandex_storage_object" "img" {
   bucket = yandex_storage_bucket.test.bucket
   key    = "image.jpg"
   source = "image.jpg"
+  acl    = "public-read"
+}
+
+resource "yandex_storage_object" "html" {
+  bucket = yandex_storage_bucket.test.bucket
+  key    = "index.html"
+  source = "index.html"
   acl    = "public-read"
 }
 # ---------- VPC ----------
