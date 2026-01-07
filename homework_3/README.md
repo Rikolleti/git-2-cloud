@@ -21,45 +21,11 @@
 - [Object Storage bucket](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/storage_bucket).
 - [KMS key](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/kms_symmetric_key).
 
---- 
-## Задание 2*. AWS (задание со звёздочкой)
+## Ответ:
 
-Это необязательное задание. Его выполнение не влияет на получение зачёта по домашней работе.
+<img width="693" height="122" alt="1" src="https://github.com/user-attachments/assets/2406a431-6295-4aa3-8710-3395627085b6" />
 
-**Что нужно сделать**
 
-1. С помощью роли IAM записать файлы ЕС2 в S3-бакет:
- - создать роль в IAM для возможности записи в S3 бакет;
- - применить роль к ЕС2-инстансу;
- - с помощью bootstrap-скрипта записать в бакет файл веб-страницы.
-2. Организация шифрования содержимого S3-бакета:
-
- - используя конфигурации, выполненные в домашнем задании из предыдущего занятия, добавить к созданному ранее бакету S3 возможность шифрования Server-Side, используя общий ключ;
- - включить шифрование SSE-S3 бакету S3 для шифрования всех вновь добавляемых объектов в этот бакет.
-
-3. *Создание сертификата SSL и применение его к ALB:
-
- - создать сертификат с подтверждением по email;
- - сделать запись в Route53 на собственный поддомен, указав адрес LB;
- - применить к HTTPS-запросам на LB созданный ранее сертификат.
-
-Resource Terraform:
-
-- [IAM Role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role).
-- [AWS KMS](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key).
-- [S3 encrypt with KMS key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_object#encrypting-with-kms-key).
-
-Пример bootstrap-скрипта:
-
-```
-#!/bin/bash
-yum install httpd -y
-service httpd start
-chkconfig httpd on
-cd /var/www/html
-echo "<html><h1>My cool web-server</h1></html>" > index.html
-aws s3 mb s3://mysuperbacketname2021
-aws s3 cp index.html s3://mysuperbacketname2021
 ```
 
 ### Правила приёма работы
