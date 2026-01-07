@@ -25,6 +25,9 @@
 
 <img width="693" height="122" alt="1" src="https://github.com/user-attachments/assets/2406a431-6295-4aa3-8710-3395627085b6" />
 
+<img width="1075" height="462" alt="2" src="https://github.com/user-attachments/assets/e2e8657c-3ddb-400f-a114-4a1d1671fcee" />
+
+
 ### Правила приёма работы
 
 Домашняя работа оформляется в своём Git репозитории в файле README.md. Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
